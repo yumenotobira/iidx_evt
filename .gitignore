@@ -1,5 +1,5 @@
 .vscode
 
-workspace/.ipynb_checkpoints/
+.ipynb_checkpoints/
 data
 .tmp/
