@@ -1,1 +1,1 @@
-FROM jupyter/r-notebook
+FROM jupyter/datascience-notebook
