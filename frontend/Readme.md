@@ -11,3 +11,10 @@ make init
 ## 環境情報
 
 * React: http://localhost:3000
+
+## Github Pagesへのデプロイ
+
+```sh
+$ make build
+$ mv app/build ../docs
+```
