@@ -14,6 +14,5 @@ make init
 
 ## Github Pagesへのデプロイ
 
-```sh
-$ make deploy
-```
+実施すべき項目はありません。
+mainブランチにマージされたタイミングでCIにより自動デプロイされます。

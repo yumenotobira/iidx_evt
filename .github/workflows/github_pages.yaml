@@ -16,6 +16,6 @@ jobs:
           cd ..
       - name: Auto commit Github Pages
         uses: stefanzweifel/git-auto-commit-action@v4
-          with:
-            commit_message: Auto deployment by Github Actions
-            file_pattern: docs
+        with:
+          commit_message: Auto deployment by Github Actions
+          file_pattern: docs

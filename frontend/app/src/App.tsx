@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          テスト
+          自動デプロイ
         </p>
       </header>
     </div>
