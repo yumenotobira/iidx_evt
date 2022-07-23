@@ -1,0 +1,21 @@
+name: Github Pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build and deploy frontend
+        run: |
+          cd frontend
+          make deploy
+          cd ..
+      - name: Auto commit Github Pages
+        uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+            commit_message: Auto deployment by Github Actions
+            file_pattern: docs
