@@ -1,11 +1,13 @@
 name: Github Pages
 on:
-  push:
+  pull_request:
     branches:
       - main
+    types: [closed]
 jobs:
   deploy-github-pages:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -17,6 +19,7 @@ jobs:
           node-version: '16'
       - name: Build and deploy frontend
         run: |
+          rm -rf docs
           cd frontend/app
           npm install
           npm run build
