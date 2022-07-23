@@ -1,7 +1,12 @@
 init: start-docker
 .PHONY: init
 
-build:
+deploy: build
+	rm -rf ../docs
+	mv app/build ../docs
+.PHONY: deploy
+
+build: start-docker
 	docker-compose exec frontend sh -c "cd /app; npm run build"
 .PHONY: build
 

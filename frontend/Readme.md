@@ -15,6 +15,5 @@ make init
 ## Github Pagesへのデプロイ
 
 ```sh
-$ make build
-$ mv app/build ../docs
+$ make deploy
 ```
